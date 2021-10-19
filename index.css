@@ -45,6 +45,7 @@ body {
 .calc__theme {
     grid-column: 1 / 5;
     background-color: #555;
+    color: #eee;
 }
 .calc :nth-child(34) {
     grid-column: 5 / 7;
