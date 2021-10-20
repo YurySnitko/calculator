@@ -4,12 +4,17 @@ const clearBtn = document.querySelector('.clear');
 const posNegBtn = document.querySelector('.posneg');
 const percent = document.querySelector('.percentage');
 const pow2Btn = document.querySelector('.pow2');
+const mcBtn = document.getElementById('mc');
+const mPlusBtn = document.getElementById('m+');
+const mMinusBtn = document.getElementById('m-');
+const mrBtn = document.getElementById('mr');
 
 let value1 = '';
 let value2 = '';
 let value3 = '';
 let operator = '';
 let lastAction = '';
+let memory = '0';
 let doubleValueOperator = ['\u002B', '\u2212', 'xy', '\u00F7', '\u00D7', 'y\u221A'];
 let singleValueOperator = ['x2', 'x3', '1/x', '2\u221A', '3\u221A', 'ex', '10x', 'ln', 'log10'];
 
@@ -273,4 +278,11 @@ calc.addEventListener('click', (event) => {
     result.innerText = getResult(result.innerText, value2, event.target.innerText);
 
     lastAction = event.target.innerText;
+})
+
+mPlusBtn.addEventListener('click', () => {
+    memory === "0" ? memory = result.innerText : memory += result.innerText ;
+})
+mMinusBtn.addEventListener('click', () => {
+    memory -= result.innerText;
 })
