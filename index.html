@@ -14,45 +14,57 @@
     <output class="display">
       <div class="display__result">0</div>
     </output>
-    <div class="calc">
-      <div class="calc__theme">theme</div>
 
-      <button type="button" class="calc__btn clear">AC</button>
-      <button type="button" class="calc__btn posneg">+/-</button>
-      <button type="button" class="calc__btn percentage">%</button>
+    <div class="calc">
+      <div class="calc__theme">
+        <div>
+          <div>Theme</div>
+        </div>
+        <div id="radioBtns">
+          <input type="radio" id="theme1" class="radio-input" name="theme" value="dark" checked>
+          <label for="theme1">Dark</label>
+
+          <input type="radio" id="theme2" class="radio-input" name="theme" value="light">
+          <label for="theme2">Light</label>
+        </div>
+      </div>
+
+      <button type="button" class="calc__btn calc__btn_other clear">AC</button>
+      <button type="button" class="calc__btn calc__btn_other posneg">+/-</button>
+      <button type="button" class="calc__btn calc__btn_other percentage">%</button>
       <button type="button" class="calc__btn calc__btn_main">&#247;</button>
 
-      <button type="button" class="calc__btn" id="mc">mc</button>
-      <button type="button" class="calc__btn" id="m+">m+</button>
-      <button type="button" class="calc__btn" id="m-">m-</button>
-      <button type="button" class="calc__btn" id="mr">mr</button>
+      <button type="button" class="calc__btn calc__btn_other" id="mc">mc</button>
+      <button type="button" class="calc__btn calc__btn_other" id="m+">m+</button>
+      <button type="button" class="calc__btn calc__btn_other" id="m-">m-</button>
+      <button type="button" class="calc__btn calc__btn_other" id="mr">mr</button>
       <button type="button" class="calc__btn calc__btn_num">7</button>
       <button type="button" class="calc__btn calc__btn_num">8</button>
       <button type="button" class="calc__btn calc__btn_num">9</button>
       <button type="button" class="calc__btn calc__btn_main">&#215;</button>
 
-      <button type="button" class="calc__btn">2<sup>nd</sup></button>
-      <button type="button" class="calc__btn immidFunc pow2">x<sup>2</sup></button>
-      <button type="button" class="calc__btn immidFunc">x<sup>3</sup></button>
-      <button type="button" class="calc__btn xy">x<sup>y</sup></button>
+      <button type="button" class="calc__btn calc__btn_other" id="secondFunc">2<sup>nd</sup></button>
+      <button type="button" class="calc__btn calc__btn_other immidFunc pow2">x<sup>2</sup></button>
+      <button type="button" class="calc__btn calc__btn_other immidFunc">x<sup>3</sup></button>
+      <button type="button" class="calc__btn calc__btn_other xy">x<sup>y</sup></button>
       <button type="button" class="calc__btn calc__btn_num">4</button>
       <button type="button" class="calc__btn calc__btn_num">5</button>
       <button type="button" class="calc__btn calc__btn_num">6</button>
       <button type="button" class="calc__btn calc__btn_main">&#8722;</button>
 
-      <button type="button" class="calc__btn immidFunc">1/x</button>
-      <button type="button" class="calc__btn immidFunc"><sup>2</sup>&#8730;</button>
-      <button type="button" class="calc__btn immidFunc"><sup>3</sup>&#8730;</button>
-      <button type="button" class="calc__btn xy"><sup>y</sup>&#8730;</button>
+      <button type="button" class="calc__btn calc__btn_other immidFunc">1/x</button>
+      <button type="button" class="calc__btn calc__btn_other immidFunc"><sup>2</sup>&#8730;</button>
+      <button type="button" class="calc__btn calc__btn_other immidFunc"><sup>3</sup>&#8730;</button>
+      <button type="button" class="calc__btn calc__btn_other xy"><sup>y</sup>&#8730;</button>
       <button type="button" class="calc__btn calc__btn_num">1</button>
       <button type="button" class="calc__btn calc__btn_num">2</button>
       <button type="button" class="calc__btn calc__btn_num">3</button>
       <button type="button" class="calc__btn calc__btn_main">&#43;</button>
 
-      <button type="button" class="calc__btn immidFunc">e<sup>x</sup></button>
-      <button type="button" class="calc__btn immidFunc">10<sup>x</sup></button>
-      <button type="button" class="calc__btn immidFunc">ln</button>
-      <button type="button" class="calc__btn immidFunc">log<sub>10</sub></button>
+      <button type="button" class="calc__btn calc__btn_other immidFunc">e<sup>x</sup></button>
+      <button type="button" class="calc__btn calc__btn_other immidFunc" id="change1">10<sup>x</sup></button>
+      <button type="button" class="calc__btn calc__btn_other immidFunc" id="change2">ln</button>
+      <button type="button" class="calc__btn calc__btn_other immidFunc">log<sub>10</sub></button>
       <button type="button" class="calc__btn calc__btn_num">0</button>
       <button type="button" class="calc__btn calc__btn_num">,</button>
       <button type="button" class="calc__btn calc__btn_main equal">&#61;</button>
