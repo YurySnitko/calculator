@@ -1,4 +1,4 @@
-import { theme1Btn, theme2Btn, calc, result, memoryAction, mrBtn } from "../index";
+import { theme1Btn, theme2Btn, calc, result, memoryAction, mrBtn } from "../index.js";
 
 export default function handleTheme() {
     if (theme2Btn.checked) {

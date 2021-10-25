@@ -1,4 +1,5 @@
-import { result } from "../index";
+import { result } from "../index.js";
+//const result = require('../index');
 
 export default function getResult(a, b, op) {
     let res = '0';
@@ -43,7 +44,7 @@ export default function getResult(a, b, op) {
             res = aTailLength ? Math.round(res * Math.pow(10, aTailLength * 9)) / Math.pow(10, aTailLength * 9) : res;
             break;
         case '1/x':
-            res = 1 / a;
+            res = a === 0 ? 'Error' : 1 / a;
             break;
         case '2\u221A':
             if (a < 0) {
@@ -68,7 +69,7 @@ export default function getResult(a, b, op) {
             if (a <= 0) {
                 res = 'Error'; 
             } else {
-                res = Math.log1p(a);
+                res = Math.log(a);
             }
             break;
         case 'log10':
@@ -86,6 +87,19 @@ export default function getResult(a, b, op) {
             }
             break;
     }
+
+    if (res !== 'Error') {
+        res = String(res);
+        let resTailLength = res.includes('.') ? res.slice(res.indexOf('.') + 1).length : 0;
+
+        res = +res;
+        res = resTailLength > 12 
+            ? (Math.round(res * Math.pow(10, 12))) / Math.pow(10, 12)
+            : res;
+    }
+
     res = String(res);
     return res.includes('.') ? res.replace('.', ',') : res;
 }
+
+//module.exports = getResult;

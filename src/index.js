@@ -1,4 +1,4 @@
-import getResult from "./js/getResult";
+import getResult from "./js/getResult.js";
 import handleTheme from "./js/handleTheme";
 
 export const calc = document.querySelector('.calc');
@@ -26,7 +26,8 @@ export let memoryAction = false;
 let doubleValueOperator = ['\u002B', '\u2212', 'xy', '\u00F7', '\u00D7', 'y\u221A'];
 let singleValueOperator = ['x2', 'x3', '1/x', '2\u221A', '3\u221A', 'ex', '10x', 'ln', 'log10'];
 
-calc.addEventListener('click', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
+    calc.addEventListener('click', (event) => {
     if (!event.target.classList.contains('calc__btn_num')) return;
     if ((result.innerText / Math.pow(10, 15)) > 1) return;
 
@@ -214,4 +215,4 @@ calc.addEventListener('mouseup', (event) => {
 });
 
 document.getElementById('radioBtns').onclick = handleTheme;
-
+})
